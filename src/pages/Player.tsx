@@ -18,7 +18,7 @@ export function Player() {
         </button>
       </header>
 
-      <main className="relative lg:flex grid overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900 shadow">
+      <main className="relative lg:flex grid overflow-hidden rounded-lg border border-zinc-800 bg-zinc-900 shadow lg:pr-80">
         <div className="flex-1">
           <div className="w-full bg-zinc-950 aspect-video">
           <ReactPlayer
@@ -29,10 +29,58 @@ export function Player() {
               />
           </div>
         </div>
-        <aside className="lg:w-80 border-t lg:border-l border-zinc-800 bg-zinc-900 w-full">
-          <div>
+        <aside className="max-h-96 lg:max-h-full scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800 lg:w-80 border-t lg:border-l border-zinc-800 bg-zinc-900 w-full overflow-y-scroll lg:absolute lg:top-0 lg:bottom-0 lg:right-0">
+          <div className="divide-y-2 divide-zinc-900">
             <button className="flex w-full items-center gap-3 bg-zinc-800 p-4">
               <div className="flex h-10 w-10 rounded-full items-center justify-center bg-zinc-900 text-sm font-medium">01</div>
+            
+              <div className="flex flex-col gap-1 text-left">
+                <strong className="text-sm">Desvendando o Redux</strong>
+                <span className="text-sm text-zinc-400">12 aulas</span>
+              </div>
+
+              <ChevronDown className="w-5 h-5 ml-auto text-zinc-400"/>
+            </button>
+
+            <button className="flex w-full items-center gap-3 bg-zinc-800 p-4">
+              <div className="flex h-10 w-10 rounded-full items-center justify-center bg-zinc-900 text-sm font-medium">02</div>
+            
+              <div className="flex flex-col gap-1 text-left">
+                <strong className="text-sm">Desvendando o Redux</strong>
+                <span className="text-sm text-zinc-400">12 aulas</span>
+              </div>
+
+              <ChevronDown className="w-5 h-5 ml-auto text-zinc-400"/>
+            </button>
+
+            <nav className="relative flex flex-col gap-4 p-6">
+              <button className="flex items-center gap-3 text-sm text-zinc-400">
+                <VideoIcon className="w-5 h-5 text-zinc-500"/>
+                <span>Fundamentos do Refsdfsddux</span>
+                <span className="ml-auto font-mono text-sm text-zinc-500">9:13</span>
+              </button>
+
+              <button className="flex items-center gap-3 text-sm text-zinc-400">
+                <VideoIcon className="w-5 h-5 text-zinc-500"/>
+                <span>Fundamentos do Redux</span>
+                <span className="ml-auto font-mono text-sm text-zinc-500">9:13</span>
+              </button>
+
+              <button className="flex items-center gap-3 text-sm text-zinc-400">
+                <VideoIcon className="w-5 h-5 text-zinc-500"/>
+                <span>Fundamentos do Redux</span>
+                <span className="ml-auto font-mono text-sm text-zinc-500">9:13</span>
+              </button>
+
+              <button className="flex items-center gap-3 text-sm text-zinc-400">
+                <VideoIcon className="w-5 h-5 text-zinc-500"/>
+                <span>Fundamentos do Redux</span>
+                <span className="ml-auto font-mono text-sm text-zinc-500">9:13</span>
+              </button>
+            </nav>
+
+            <button className="flex w-full items-center gap-3 bg-zinc-800 p-4">
+              <div className="flex h-10 w-10 rounded-full items-center justify-center bg-zinc-900 text-sm font-medium">03</div>
             
               <div className="flex flex-col gap-1 text-left">
                 <strong className="text-sm">Desvendando o Redux</strong>
