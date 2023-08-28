@@ -13,15 +13,15 @@ export function Player() {
         <div className="flex-1">
          <Video />
         </div>
-        <aside className="max-h-96 lg:max-h-full scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800 lg:w-80 border-t lg:border-l border-zinc-800 bg-zinc-900 w-full overflow-y-scroll lg:absolute lg:top-0 lg:bottom-0 lg:right-0">
+      <aside className="max-h-96 lg:max-h-full scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800 lg:w-80 border-t lg:border-l border-zinc-800 bg-zinc-900 w-full overflow-y-scroll lg:absolute lg:top-0 lg:bottom-0 lg:right-0">
 
-          <Module moduleIndex={0} title="Oque é Redux" amountOfLessons={2} />
+      <div className="divide-y-2 divide-zinc-900" > 
+        <Module moduleIndex={0} title="Oque é Redux" amountOfLessons={2} />
+        <Module moduleIndex={1} title="Oque é Zustand" amountOfLessons={3}/>
+        <Module moduleIndex={2} title="Ambos conectados" amountOfLessons={5}/>
+      </div>
 
-          <Module moduleIndex={1} title="Oque é Zustand" amountOfLessons={3}/>
-
-          <Module moduleIndex={2} title="Ambos conectados" amountOfLessons={5}/>
-
-        </aside>
+      </aside>
       </main>
     </div>
   </div>
