@@ -1,14 +1,15 @@
+import { useEffect } from "react";
+
 import { Header } from "../components/Header";
 import { Video } from "../components/Video";
 import { Module } from "../components/Module";
-import { useAppSelector } from "../store";
-import { start, useCurrentLesson } from "../store/slices/player";
-import { useEffect } from "react";
-import { api } from "../lib/axios";
-import { useDispatch } from "react-redux";
+
+import { useAppDispatch, useAppSelector } from "../store";
+import { loadCourse, useCurrentLesson } from "../store/slices/player";
+import { SidebarLoading } from "../components/SidebarLoading";
 
 export function Player() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const modules = useAppSelector(state => {
     return state.player.course?.modules
@@ -17,9 +18,7 @@ export function Player() {
   const { currentLesson } = useCurrentLesson()
 
   useEffect(() => {
-    api.get('/courses/1').then(response => {
-      dispatch(start(response.data))
-    })
+    void dispatch(loadCourse())
   }, [dispatch])
 
   useEffect(() => {
@@ -27,6 +26,8 @@ export function Player() {
       document.title = `Assistindo: ${currentLesson.title}`
     }
   }, [currentLesson])
+
+  const isLessonLoading = useAppSelector(state => state.player.isLoading)
 
   return (
     <div className="h-screen bg-zinc-950 text-zinc-50 flex justify-center items-center">
@@ -39,9 +40,16 @@ export function Player() {
          <Video />
         </div>
       <aside className="max-h-96 lg:max-h-full scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800 lg:w-80 border-t lg:border-l border-zinc-800 bg-zinc-900 w-full overflow-y-scroll lg:absolute lg:top-0 lg:bottom-0 lg:right-0">
-
+   
       <div className="divide-y-2 divide-zinc-900" > 
-        {modules && modules.map((module, index) => {
+        {isLessonLoading ? (
+          <>
+            <SidebarLoading />
+            <SidebarLoading />
+            <SidebarLoading />
+          </>
+        ) : (
+          modules?.map((module, index) => {
           return (
             <Module 
               key={module.id} 
@@ -50,7 +58,8 @@ export function Player() {
               amountOfLessons={module.lessons.length} 
             />
           )
-        })}
+        })
+        ) }
       </div>
 
       </aside>

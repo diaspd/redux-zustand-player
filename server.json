@@ -7,7 +7,7 @@
           "id": 1,
           "title": "Iniciando com React",
           "lessons": [
-            { "id": "Jai8w6K_GnY", "title": "CSS Modules", "duration": "13:45" },
+            { "id": "7A4UQGrFU9Q?si=4hizm_gmRAgVtN6J", "title": "CSS Modules", "duration": "13:45" },
             { "id": "w-DW4DhDfcw", "title": "Estilização do Post", "duration": "10:05" },
             { "id": "D83-55LUdKE", "title": "Componente: Header", "duration": "06:33" },
             { "id": "W_ATsETujaY", "title": "Componente: Sidebar", "duration": "09:12" },
@@ -23,6 +23,16 @@
             { "id": "Ng_Vk4tBl0g", "title": "Responsividade", "duration": "10:05" },
             { "id": "h5JA3wfuW1k", "title": "Interações no JSX", "duration": "06:33" },
             { "id": "1G0vSTqWELg", "title": "Utilizando estado", "duration": "09:12" }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Finalizando o projeto",
+          "lessons": [
+            { "id": "LGkNjt7k4UQ&ab", "title": "Configurando ESLint", "duration": "10:45" },
+            { "id": "q-If9n-tUyA&ab", "title": "Continuando", "duration": "5:05" },
+            { "id": "MW7hrQe6aYo&ab", "title": "Config Github", "duration": "07:33" },
+            { "id": "ICIz5dE3Xfg&ab", "title": "Deploy", "duration": "30:12" }
           ]
         }
       ]
