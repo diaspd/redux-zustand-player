@@ -1,6 +1,6 @@
-import { MessageCircle } from "lucide-react";
 import { useCurrentLesson } from "../store/slices/player";
 import { useAppSelector } from "../store";
+import { FeedbackButton } from "./FeedBackButton";
 
 export function Header () {
   const { currentModule, currentLesson } = useCurrentLesson()
@@ -29,11 +29,7 @@ export function Header () {
         </div>
       )}
    
-
-    <button className="whitespace-nowrap flex mb-auto items-center rounded bg-violet-500 gap-2 px-3 py-2 text-sm font-medium text-white hover:bg-violet-600 mt-2">
-      <MessageCircle className="w-4 h-4" fontWeight="bold"/>
-     <span className="hidden lg:flex">Deixar feedback</span>
-    </button>
-  </header>
+      <FeedbackButton />
+    </header>
   )
 }
