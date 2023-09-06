@@ -5,7 +5,7 @@ import { useCurrentLesson, useStore } from "../zustand-store";
 export function Video() {
   const { currentLesson } = useCurrentLesson()
   
-  const { isLoading, next } = useStore(store => {
+  const { next } = useStore(store => {
     return {
       isLoading: store.isLoading,
       next: store.next
@@ -15,12 +15,10 @@ export function Video() {
   function handlePlayNext() {
     next()
   }
-
-  if (!currentLesson) return
   
   return (
     <div className="w-full bg-zinc-950 aspect-video">
-      {isLoading ? (
+      {!currentLesson  ? (
         <div className="flex h-full items-center justify-center">
           <Loader2 className="w-6 h-6 text-zinc-400 animate-spin transition-all delay-1000" />
         </div>
