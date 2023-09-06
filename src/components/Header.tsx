@@ -1,14 +1,14 @@
-import { useCurrentLesson } from "../store/slices/player";
-import { useAppSelector } from "../store";
-import { FeedbackButton } from "./FeedBackButton";
+import { useCurrentLesson, useStore } from "../zustand-store";
+import { FeedbackButton } from "./FeedbackButton";
 
 export function Header () {
   const { currentModule, currentLesson } = useCurrentLesson()
-  const isCourseLoading = useAppSelector(state => state.player.isLoading)
+
+  const isLoading = useStore(store => store.isLoading)
 
   return (
     <header className="flex items-center justify-between h-12">
-      {isCourseLoading ? (
+      {isLoading ? (
         <div className="shadow rounded-md w-1/3 animate-pulse h-6">
           <div className="flex">
             <div className="flex-1 py-1">

@@ -4,30 +4,28 @@ import { Header } from "../components/Header";
 import { Video } from "../components/Video";
 import { Module } from "../components/Module";
 
-import { useAppDispatch, useAppSelector } from "../store";
-import { loadCourse, useCurrentLesson } from "../store/slices/player";
 import { SidebarLoading } from "../components/SidebarLoading";
+import { useCurrentLesson, useStore } from "../zustand-store";
 
 export function Player() {
-  const dispatch = useAppDispatch()
-
-  const modules = useAppSelector(state => {
-    return state.player.course?.modules
+  const { course, load } = useStore(store => {
+    return {
+      course: store.course,
+      load: store.load
+    }
   })
 
   const { currentLesson } = useCurrentLesson()
 
   useEffect(() => {
-    void dispatch(loadCourse())
-  }, [dispatch])
+    void load()
+  }, [load])
 
   useEffect(() => {
     if (currentLesson) {
       document.title = `Assistindo: ${currentLesson.title}`
     }
   }, [currentLesson])
-
-  const isLessonLoading = useAppSelector(state => state.player.isLoading)
 
   return (
     <div className="h-screen bg-zinc-950 text-zinc-50 flex justify-center items-center">
@@ -42,14 +40,14 @@ export function Player() {
       <aside className="max-h-96 lg:max-h-full scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800 lg:w-80 border-t lg:border-l border-zinc-800 bg-zinc-900 w-full overflow-y-scroll lg:absolute lg:top-0 lg:bottom-0 lg:right-0">
    
       <div className="divide-y-2 divide-zinc-900" > 
-        {isLessonLoading ? (
+        {!course ? (
           <>
             <SidebarLoading />
             <SidebarLoading />
             <SidebarLoading />
           </>
         ) : (
-          modules?.map((module, index) => {
+          course?.modules?.map((module, index) => {
           return (
             <Module 
               key={module.id} 
