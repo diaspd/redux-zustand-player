@@ -56,6 +56,7 @@ This project was developed with the following technologies:
 - TypeScript
 - Redux
 - Zutand
+- TailwindCss
 </b>
 
 </br>
