@@ -54,6 +54,7 @@ This project was developed with the following technologies:
 <b>
 - React
 - TypeScript
+- Redux
 </b>
 
 </br>
