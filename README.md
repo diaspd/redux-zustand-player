@@ -55,6 +55,7 @@ This project was developed with the following technologies:
 - React
 - TypeScript
 - Redux
+- Zutand
 </b>
 
 </br>
