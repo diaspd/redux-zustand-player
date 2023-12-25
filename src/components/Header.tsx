@@ -14,10 +14,10 @@ export function Header () {
             <div className="flex-1 py-1">
               <div className="space-y-3">
               <div className="grid grid-cols-3 gap-4">
-                <div className="h-3 bg-zinc-700 rounded col-span-2"></div>
-                <div className="h-3 bg-zinc-700 rounded col-span-1"></div>
+                <div className="h-3 bg-zinc-700 rounded col-span-2" />
+                <div className="h-3 bg-zinc-700 rounded col-span-1" />
               </div>
-              <div className="h-2 bg-zinc-700 rounded"></div>
+              <div className="h-2 bg-zinc-700 rounded" />
               </div>
             </div>
           </div>
