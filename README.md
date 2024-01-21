@@ -62,7 +62,7 @@ This project was developed with the following technologies:
 </br>
 
 ## 📄 Project
-💰 A project to train knowledge in Redux and Zustand.
+💰 A project to train knowledge in Redux, Zustand, store management and more.
 
 <br></br>
 
