@@ -47,7 +47,7 @@ $ npm run server
 
 The app will be available on `http://localhost:5173` </br>
 The server will be available on `http://localhost:3000` <br></br>
-`Don't forget to change the api baseUrl on src/lib/axios.ts to 'http://localhost:3000'` 
+`Don't forget to change the api baseUrl on 'src/lib/axios.ts' to 'http://localhost:3000'` 
 
 <br></br>
 
