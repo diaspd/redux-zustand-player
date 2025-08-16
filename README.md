@@ -2,7 +2,7 @@
    <h1> Redux Zustand Player </h1>
 </div> 
 
-<h2 align="center">Link to site online: <a href="redux-zustand-player.vercel.app" target="_blank">Player</a> </h2>
+<h2 align="center">Link to site online: <a href="https://redux-zustand-player.vercel.app/" target="_blank">Player</a> </h2>
 
 <div align="center">
   <a href="#-Technologies"><b>Technologies</b></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
